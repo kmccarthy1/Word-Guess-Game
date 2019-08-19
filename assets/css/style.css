@@ -1,0 +1,6 @@
+body {
+    background-position: center;
+    background-attachment: fixed;
+    border-left: 50px solid black;
+    border-right: 50px solid black;
+}
