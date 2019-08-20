@@ -1,7 +1,7 @@
 
 //Lists all composer names that will be used
 var ComposerBank = ["Bach" , "Beethoven" , "Mozart" , "Brahms" , "Wagner" , "Debussy"
- , "Tchaikobsky" , "Chopin" , "Vivaldi" , "Haydn"];
+ , "Tchaikovsky" , "Chopin" , "Vivaldi" , "Haydn"];
 
 //sets up variables for all audio files
 
@@ -40,10 +40,10 @@ var WordGuessArray = [];
 function Gameplay() {
 
     //selecting a random word from the bank/array
-    randomWord = ComposerBank[Math.floor(Math.random() * ComposerBank.length)];
+   var randomWord = ComposerBank[Math.floor(Math.random() * ComposerBank.length)];
 
-    lettersInWord = randomWord.split ("");
-    blanks = lettersInWord.length;
+   var lettersInWord = randomWord.split("");
+   var blanks = lettersInWord.length;
 
     for (var x = 0; x < blanks; x++) {
         WordGuessArray.push("_");
@@ -59,6 +59,7 @@ function Gameplay() {
         UserInput = UserInput.toLowerCase();
         
     }
+    document.getElementById("currentword").innerHTML = " " + WordGuessArray.join(" ");
 
     console.log (randomWord);
     console.log (lettersInWord);
@@ -67,12 +68,31 @@ function Gameplay() {
 
 
 }
+ 
 
-console.log (randomWord);
-console.log (lettersInWord);
-console.log (blanks);
-console.log (WordGuessArray);
 
+
+
+var ba = document.getElementById("Bach");
+var beet = document.getElementById("Beethoven");
+var mo = document.getElementById("Mozart");
+var bra = document.getElementById("Brahms");
+var wag = document.getElementById("Wagner");
+var de = document.getElementById("Debussy");
+var tch = document.getElementById("Tchaikovsky");
+var cho = document.getElementById("Chopin");
+var viv = document.getElementById("Vivaldi");
+var ha = document.getElementById("Haydn");
+
+
+
+
+
+
+function audio() {
+
+
+}
 
 
 
