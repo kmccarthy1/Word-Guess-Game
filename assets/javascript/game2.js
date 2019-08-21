@@ -2,6 +2,7 @@
 //Lists all composer names that will be used
 var ComposerBank = ["Bach" , "Beethoven" , "Mozart" , "Brahms" , "Wagner" , "Debussy"
  , "Tchaikovsky" , "Chopin" , "Vivaldi" , "Haydn"];
+ var arrLength = ComposerBank.length;
 
 //sets up variables for all audio files
 
@@ -21,8 +22,8 @@ var HaydnMusic = ;
 */
 
 //counter variables to keep track of wins, losses
-var wins = 0;
-var losses = 0;
+var WinCounter = 0;
+var LossCounter = 0;
 
 //variables to keep track of guessed letters and # of guess lives
 var wrongGuess = [];
@@ -34,7 +35,12 @@ var randomWord = "";
 var WordGuessArray = [];
 
 
+var selectedWord = ComposerBank[Math.floor(Math.random() * arrLength)];
+var splitWord = selectedWord.split("");
+var selectedWordLength = selectedWord.length;
+console.log(selectedWord)
 
+var placeHolder = "";
 
 
 function Gameplay() {
@@ -61,10 +67,6 @@ function Gameplay() {
     }
     document.getElementById("currentword").innerHTML = " " + WordGuessArray.join(" ");
 
-    console.log (randomWord);
-    console.log (lettersInWord);
-    console.log (blanks);
-    console.log (WordGuessArray);
 
 
 }
